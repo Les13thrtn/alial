@@ -1,0 +1,130 @@
+.characteristics {
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10.7rem;
+  }
+
+  &__item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    max-width: 37.5rem;
+    cursor: pointer;
+
+    &_icon {
+      margin-right: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 7.1rem;
+      height: 7.1rem;
+      background-color: $black;
+      border-radius: 50%;
+
+      img {
+        height: 3.3rem;
+        max-width: 60%;
+        object-fit: contain;
+      }
+    }
+
+    &_text {
+      max-width: 28.2rem;
+      font-weight: 600;
+      font-size: 2rem;
+      line-height: 125%;
+    }
+
+    &_info {
+      position: absolute;
+      left: -21.5rem;
+      bottom: 10rem;
+      width: 51.2rem;
+      padding: 2rem 8.5rem;
+      font-weight: 600;
+      font-size: 2rem;
+      line-height: 125%;
+      color: $gray;
+      -webkit-transform: skew(-20deg);
+      -moz-transform: skew(-20deg);
+      -o-transform: skew(-20deg);
+      background-color: #ffffff;
+      box-shadow: 0.2rem -0.4rem 2.6rem -2.6rem rgba(66, 66, 66, 0.05);
+      opacity: 0;
+      pointer-events: none;
+
+      &:before {
+        content: '';
+        position: absolute;
+        bottom: -2.5rem;
+        left: 41%;
+        width: 0;
+        height: 0;
+        border-left: 6rem solid transparent;
+        border-right: 6rem solid transparent;
+        border-top: 3.2rem solid #ffffff;
+        -webkit-transform: skew(20deg);
+        -moz-transform: skew(20deg);
+        -o-transform: skew(20deg);
+      }
+
+      &_text {
+        -webkit-transform: skew(20deg);
+        -moz-transform: skew(20deg);
+        -o-transform: skew(20deg);
+      }
+    }
+
+    &:hover {
+      .characteristics__item_info {
+        opacity: 1;
+        transition: 0.5s;
+      }
+    }
+  }
+}
+
+@media (max-width: 48em) {
+  .characteristics {
+    &__content {
+      gap: 0rem;
+    }
+
+    &__item {
+      max-width: 100%;
+
+      &_icon {
+        margin-right: 4rem;
+        width: 10rem;
+        height: 10rem;
+
+        img {
+          height: 4.6rem;
+        }
+      }
+
+      &_text {
+        max-width: 80%;
+        font-size: 3rem;
+      }
+
+      &_info {
+        left: 0rem;
+        bottom: 14.4rem;
+        width: 67rem;
+        padding: 1.7rem 8.8rem;
+        font-weight: 500;
+        font-size: 2.6rem;
+
+        &:before {
+          left: 1%;
+        }
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 4rem;
+      }
+    }
+  }
+}

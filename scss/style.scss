@@ -1,0 +1,55 @@
+@import 'param';
+@import 'set';
+@import 'components';
+
+@import 'header';
+@import 'footer';
+@import 'main-intro';
+@import 'sales-leader';
+@import 'work';
+@import 'advantages';
+@import 'services';
+@import 'partners';
+@import 'articles-items';
+@import 'realized-slider';
+@import 'feedback';
+@import 'article-item';
+@import 'licenses';
+@import 'modal';
+@import 'catalog-intro';
+@import 'catalog';
+@import 'contacts';
+@import 'realized';
+@import 'about-intro';
+@import 'great-offer';
+@import 'work-intro';
+@import 'stages';
+// @import 'work-desc';
+@import 'article';
+@import 'product';
+@import 'characteristics';
+@import 'product-info';
+@import 'similar-products';
+@import 'article-hero';
+@import 'article-content';
+@import 'comments';
+@import 'comment-form';
+@import 'news';
+@import 'news-hero';
+@import 'news-card';
+
+body.lock {
+  overflow: hidden !important;
+}
+
+@media (min-width: 48.01em) {
+  .mobile {
+    display: none;
+  }
+}
+
+@media (max-width: 48em) {
+  .desktop {
+    display: none;
+  }
+}
